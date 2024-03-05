@@ -33,7 +33,7 @@ const mailSend = async (to, subject, html) => {
         service:'gmail',
         auth:{
             user:'zkartik27@gmail.com',
-            pass:'xwznscphbxrivvjn'
+            pass:'xxxxxxxxxxxx'
         }
     })
 
