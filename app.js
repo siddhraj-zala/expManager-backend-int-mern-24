@@ -31,6 +31,7 @@ const transactionRoutes = require("./Routes/TransactionRoutes");
 const transactionTypeRoutes = require("./Routes/TransactionTypeRoutes");
 const userRoutes = require("./Routes/UserRoutes");
 const mailRoutes = require("./Routes/MailRoutes");
+const goalRoutes = require("./Routes/ExpenseGoalRoutes");
 
 
 //Provide Routes to the server...
@@ -45,6 +46,7 @@ app.use("/transaction", transactionRoutes);
 app.use("/transactionType", transactionTypeRoutes);
 app.use("/user", userRoutes);
 app.use("/mail", mailRoutes);
+app.use("/goal", goalRoutes)
 
 
 //Server establishment...
