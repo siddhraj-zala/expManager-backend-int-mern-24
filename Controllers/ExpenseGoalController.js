@@ -1,4 +1,5 @@
 const goalSchema = require("../Models/ExpenseGoalModel");
+const transactionSchema = require("../Models/TransactionModel");
 
 const createGoal = async (req, res) => {
    
@@ -82,10 +83,11 @@ const updateGoalById = async (req, res) => {
 const deleteGoalById = async (req, res) => {
    
     try{
+        const deletedTransactions = await transactionSchema.deleteMany({goal:req.params.id});
         const deletedGoal = await goalSchema.findByIdAndDelete(req.params.id);
         
         res.status(200).json({
-            message:"goal deleted successfully",
+            message:"goal and it's releted transactions deleted successfully",
             data:deletedGoal,
             flag:1
         })

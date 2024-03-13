@@ -18,10 +18,10 @@ const transactionSchema = new Schema({
         ref: "Category"
     },
 
-    subCategory: {
-        type: Schema.Types.ObjectId,
-        ref: "SubCategory"
-    },
+    // subCategory: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "SubCategory"
+    // },
 
     paymentType: {
         type: Schema.Types.ObjectId,
@@ -31,6 +31,12 @@ const transactionSchema = new Schema({
     transactionType:{
         type: Schema.Types.ObjectId,
         ref:"TransactionType",
+    },
+
+    goal:{
+        type: Schema.Types.ObjectId,
+        ref: "Goal",
+        // default:null
     },
 
     amount:{
@@ -47,7 +53,11 @@ const transactionSchema = new Schema({
 
     description:{
         type: String
-    }
+    },
+
+    title:{
+        type: String
+    },
 
 })
 
