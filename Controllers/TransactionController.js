@@ -218,5 +218,5 @@ module.exports = {
     deleteTransactionById,
     getTransactionByUserId,
     getFilteredTransactionByUserId,
-    updateManyTr
+    updateManyTr,
 }
