@@ -36,7 +36,7 @@ const createUser = async (req, res) => {
                             </body>
                         </html>
                     `;
-        const mailRes = mailer.mailSend(to, sub, html);
+        // const mailRes = mailer.mailSend(to, sub, html);
         
         res.status(201).json({
             message: "user created successfully",
